@@ -2,8 +2,8 @@
 </script>
 
 <template>
-    <div>
-        I am a user
+    <div class="flex p-8 justify-center">
+        I am the user page
     </div>
 </template>
 

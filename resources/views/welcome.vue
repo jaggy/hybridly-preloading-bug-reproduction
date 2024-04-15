@@ -14,6 +14,8 @@ const updateUser = useForm({
     url: route('users.update', { user: 1 }),
     fields: {},
 })
+
+const preloaded = ref(false)
 </script>
 
 <template layout>
@@ -24,9 +26,13 @@ const updateUser = useForm({
 
 
             <div class="mt-4">
-                <RouterLink href="/preload-users/1" preload  class="underline">
+                <RouterLink href="/preload-users/1" preload  class="underline" @mouseover="preloaded = true">
                     Link to /preload/users/1
                 </RouterLink>
+            </div>
+
+            <div class="mt-4">
+                {{ preloaded ? 'Preloaded!': 'Hover on link to preload' }}
             </div>
 
             <div class="mt-4">
